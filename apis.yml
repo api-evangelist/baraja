@@ -1,23 +1,73 @@
 aid: baraja
+
 name: Baraja
-description: 'Baraja is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.sanity.io/images/vpc9c65d/production/10d33da50f646e098491588caf45aa832533b52f-1200x630.jpg?w=1200&h=630
+
+description: 'Baraja is a deep‑technology company that has reinvented LiDAR for self‑driving vehicles. Their Spectrum‑Scan™ platform delivers unprecedented range, precision and reliability, enabling high‑quality point‑cloud data for autonomous automotive applications. Founded in 2015 in Sydney, Australia, Baraja operates globally with offices in China and the USA, focusing on single‑chip LiDAR designs and scalable manufacturing.'
+
 url: https://raw.githubusercontent.com/api-evangelist/baraja/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-27 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-27'
+
 modified: '2026-09-27'
+
 tags:
 - Company
-apis: []
+- LiDAR
+- AutonomousVehicles
+- DeepTech
+- AustralianStartup
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Conformance
+  url: conformance/baraja-conformance.yml
+- type: Hosts
+  url: hosts/baraja-hosts.yml
+- type: Vendors
+  url: vendors/baraja-vendors.yml
+- type: Newsroom
+  url: https://www.baraja.com/en/media
+- type: DomainSecurity
+  url: security/baraja-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/baraja
+  url: https://www.baraja.com
+- type: Documentation
+  url: https://www.baraja.com/en/technology/white-paper
+- type: Blog
+  url: https://www.baraja.com/en/blog
+- type: PrivacyPolicy
+  url: https://www.baraja.com/en/privacy-policy
+- type: TermsOfService
+  url: https://www.baraja.com/en/terms-and-conditions
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: Baraja provides no public developer program or API documentation.
+  evidence:
+    - url: https://www.baraja.com/en
+      status: 200
+x-enrichment:
+  date: '2026-09-27'
+  status: enriched
+  artifacts_added: 6
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
